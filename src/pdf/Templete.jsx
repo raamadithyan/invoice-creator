@@ -43,8 +43,33 @@ let sum = 0;
     console.log(`Sum is = ${sum}`);
 
 	return (
-		<div className="border-2 border-red-600 w-[100vw] h-[100vh] flex justify-center items-center ">
-        <div>
+		<div ref={ref}className="border-2 border-red-600 w-[100vw] h-[100vh] flex flex-col justify-center items-center ">
+        <div className="w-[50%]">
+        
+      {/*++++++++ BARCODE AND COMPANY NAME +++++++*/}
+
+      <div className="flex justify-between border border-purple-600 ">
+      <div>barcode</div>
+      
+      <div>
+        <h3 className="font-bold">Company Name:</h3>
+        <p>+91-5646746747</p>
+        <p>sample@gmail.com</p>
+      </div>
+        
+      </div>
+
+      {/*++++++++ INDEX ID +++++++*/}
+
+      <div className="flex flex-col items-center">
+        <div className="font-bold text-blue-800">INVOICE</div>
+        <div>id:1234</div>
+
+      </div>
+
+
+
+        <div className="border border-green-600">
     <span onClick={()=>setCreate(true)}>X</span>
 
         <table className="table-auto">
@@ -71,6 +96,8 @@ let sum = 0;
 </table>
     </div>
 			
+
+      </div>
 		</div>
 	)
 }
