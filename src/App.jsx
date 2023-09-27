@@ -3,7 +3,6 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
- import { Routes,Route } from 'react-router-dom'
 
 import Templete from './pdf/Templete'
 import Home from './Home'
@@ -14,19 +13,17 @@ function App() {
 
   return (
     <>
-<Routes>
 
     {create ? (                    
-      <Route path="/" element={<Home setCreate={setCreate}/>} />  ):(  
+      <Home setCreate={setCreate}/> ):(  
 
       
     
     
-    <Route path='/invoice' element={<Templete setCreate={setCreate}/>}/>
+    <Templete setCreate={setCreate}/>
     )}
 
  
-</Routes>
 
     </>
   )
