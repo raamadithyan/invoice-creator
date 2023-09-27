@@ -7,7 +7,6 @@ import { Dialog, DialogTitle,DialogContent } from "@mui/material";
 
 import Barcode from "react-barcode";
 
- import { Link } from "react-router-dom";
 
 
 function Pdftemplete({setCreate}) {
@@ -46,7 +45,7 @@ let sum = 0;
 	return (
 		<div className="border-2 border-red-600 w-[100vw] h-[100vh] flex justify-center items-center ">
         <div>
-    <Link to ="/"><span onClick={()=>setCreate(true)}>X</span></Link>
+    <span onClick={()=>setCreate(true)}>X</span>
 
         <table className="table-auto">
   <thead>
