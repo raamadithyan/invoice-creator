@@ -5,7 +5,7 @@ function Home({setCreate}) {
 
  function  handleCreate(){
       setCreate(false)
-      console.log("jhhvj")
+      // console.log("jhhvj")
   }
 	return (
 		<div>

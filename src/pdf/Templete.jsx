@@ -11,37 +11,65 @@ import Barcode from "react-barcode";
 
 
 function Pdftemplete({setCreate}) {
+
+  const ref = useRef();
+    const [Popup, setPopup] = useState(false);
+
+
+    const [Item, setItem] = useState('');
+    const [Amount, setAmount] = useState(0);
+    const [Total, setTotal ] = useState(0);
+
+    
+    const [List, setList] = useState([]);
+
+    const addData = () => {
+        List.push({
+            product: Item,
+            amount: Amount,
+        })
+        console.log(List);
+        setItem('')
+        setAmount('')
+        setPopup(false);
+    }
+
+
+// useEffect(()=>{addData()},[])
+let sum = 0;
+    List.forEach(am => {
+        sum += parseInt(am.amount)
+    })
+    // setTotal(sum)
+    console.log(`Sum is = ${sum}`);
+
 	return (
 		<div className="border-2 border-red-600 w-[100vw] h-[100vh] flex justify-center items-center ">
         <div>
+    <Link to ="/"><span onClick={()=>setCreate(true)}>X</span></Link>
 
         <table className="table-auto">
   <thead>
     <tr>
-      <th>Song</th>
-      <th>Artist</th>
-      <th>Year</th>
+      <th>Product</th>
+      <th>Amount</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-      <td>Malcolm Lockyer</td>
-      <td>1961</td>
+      <th>Total Amount:</th>
+      <td >$0</td>
     </tr>
     <tr>
-      <td>Witchy Woman</td>
-      <td>The Eagles</td>
-      <td>1972</td>
+      <th>Total Payable:</th>
+      <td >$0</td>
     </tr>
     <tr>
-      <td>Shining Star</td>
-      <td>Earth, Wind, and Fire</td>
-      <td>1975</td>
+      <th className="text-blue-900">Total</th>
+      <th className="text-blue-900">$0</th>
     </tr>
   </tbody>
 </table>
-    <Link to ="/"><span onClick={()=>setCreate(true)}>X</span></Link>
     </div>
 			
 		</div>

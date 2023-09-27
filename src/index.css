@@ -12,3 +12,19 @@ body {
   font-family: "Roboto",sans-serif;
 /*  border: 3px solid blue;*/
 }
+
+table {
+  border-collapse: separate;
+  border-spacing: 30px;
+  border: 2px solid red;
+}
+thead,tbody {
+  text-align: left;
+  border-spacing: 30px;
+  border: 2px solid red;
+
+
+}
+th, td {
+/*  padding: 0.5rem 8rem;*/
+}
