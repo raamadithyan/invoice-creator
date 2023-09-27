@@ -15,8 +15,9 @@ body {
 
 table {
   border-collapse: separate;
-  border-spacing: 30px;
+  border-spacing: 1rem;
   border: 2px solid red;
+  width: 100%;
 }
 thead,tbody {
   text-align: left;
